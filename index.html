@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Happy Birthday To My Dearest Person in the World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff1f2;
+        overflow: hidden;
+        font-family: 'Satoshi', sans-serif;
+        color: #881337;
+        height: 100dvh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .font-playfair {
+        font-family: 'Playfair Display', serif;
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #b76e79, #f43f5e, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 10px 30px -10px rgba(183, 110, 121, 0.2);
+        position: relative;
+        overflow: hidden;
+        max-height: 80dvh;
+        width: 90vw;
+        max-width: 400px;
+        margin: auto;
+      }
+      .glass-card::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+        transform: rotate(45deg);
+        animation: shine 6s infinite;
+        pointer-events: none;
+      }
+      @keyframes shine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        30%, 100% { transform: translateX(100%) rotate(45deg); }
+      }
+      .aurora-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: #fff1f2;
+      }
+      .aurora-blob {
+        position: absolute;
+        filter: blur(60px);
+        opacity: 0.35;
+        border-radius: 50%;
+        animation: breathe 12s infinite alternate ease-in-out;
+      }
+      @keyframes breathe {
+        0% { transform: scale(1) translate(0, 0); }
+        100% { transform: scale(1.15) translate(5%, 5%); }
+      }
+      .btn-gradient {
+        background: linear-gradient(135deg, #b76e79 0%, #e11d48 100%);
+        box-shadow: 0 6px 15px rgba(183, 110, 121, 0.2);
+        transition: all 0.3s ease;
+      }
+      .photo-stack-item {
+        transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .music-btn {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        z-index: 100;
+      }
+    </style>
+
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom": "https://esm.sh/react-dom@^19.2.4",
+        "three": "https://esm.sh/three@^0.182.0",
+        "gsap": "https://esm.sh/gsap@^3.14.2",
+        "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/birthday/assets/index-CsQFm0r2.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+<audio id="bg-music" loop>
+ <source src="/birthday/music/birthday.mp3" type="audio/mpeg" />
+
+  Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
